@@ -36,7 +36,8 @@ class Player:
         self.bankroll -= 1
         self.update_bets(1)
 
-    def get_action(self, the_call):
+    def get_action(self, table):
+        the_call = table.current_call
         amount_to_call = max(0, the_call - self.bet_this_round)
         action = input(f"{self.name}, ${amount_to_call} to call. [c] to call, [r] to raise, [a] for all-in, [f] to fold: ").lower()
 

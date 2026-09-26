@@ -64,7 +64,7 @@ class Table:
 
     def prompt_player(self, player):
         self.display_table()
-        action, chips_paid, new_total_bet = player.get_action(self.current_call)
+        action, chips_paid, new_total_bet = player.get_action(self)
         
         if action == "fold":
             self.folds += 1
